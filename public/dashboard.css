@@ -1,0 +1,147 @@
+body {
+    background-color: #f4f7fc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y: auto;
+    padding-top: 80px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+}
+
+.logout {
+    font-size: 16px;
+    text-decoration: none;
+    color: #0d6efd;
+    font-weight: bold;
+}
+
+.dashboard-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.upload-area {
+    border: 2px dashed #0d6efd;
+    padding: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.upload-area:hover {
+    background: #e9f2ff;
+}
+
+.file-input-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #0d6efd;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.file-input-label:hover {
+    background-color: #0056b3;
+}
+
+/* Hide the default file input */
+#fileInput {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+button {
+    background-color: #0d6efd;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.file-grid {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.file-card {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.file-card img {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
+    border-radius: 5px;
+}
+
+.file-card:hover .file-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.file-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+}
+
+.file-actions button {
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.file-actions button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
